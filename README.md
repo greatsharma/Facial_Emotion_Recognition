@@ -11,6 +11,8 @@ The notebook is available [here](https://www.kaggle.com/gauravsharma99/facial-em
 
 ![epoch history](plots/model_2/epoch_history.png "Epoch Histrory")
 
+![Performance Distribution](plots/model_2/performance_dist.png "Performance Distribution")
+
 The epoch's history shows that accuracy gradually increases and achieved +83% on both training and validation set, but at the end the model starts overfitting training data.
 
 ![confusion matrix](plots/model_2/confusion_matrix.png "Confusion Matrix")
