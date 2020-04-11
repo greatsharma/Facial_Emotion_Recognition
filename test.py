@@ -67,9 +67,7 @@ else:
 
         if iswebcam:
             frame=cv2.flip(frame,1,0)
-        else:
-            out = cv2.VideoWriter('out.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (600,500))
-        
+
         gray_frame= cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
         faces = haarcascade.detectMultiScale(gray_frame, 1.32, 5)
@@ -86,10 +84,8 @@ else:
 
             cv2.putText(frame, predicted_emotion, (int(x), int(y)), cv2.FONT_HERSHEY_SIMPLEX, 1, (0,0,255), 2)
 
-        resized_img = cv2.resize(frame, (600, 500))
+        resized_img = cv2.resize(frame, (700, 600))
         cv2.imshow('Facial Emotion Recognition',resized_img)
-        if not iswebcam:
-            out.write(resized_img)
 
         if cv2.waitKey(10) == ord('q'):
             break
