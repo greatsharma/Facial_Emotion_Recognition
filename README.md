@@ -17,7 +17,12 @@ The epoch's history shows that accuracy gradually increases and achieved +83% on
 
 ![confusion matrix](plots/model_2/confusion_matrix.png "Confusion Matrix")
 
-The confusion matrix clearly shows that our model is doing good job on the class `happy` but it's performance is low on other two classes. One of the reason for this could be the fact that these two classes have less data. But when I looked at the images I found some images from these two classes are even hard for a human to tell whether the person is sad or neutral. Facial expression depends on individual as well. `Some person's neutral face looks like sad face.`<br><br>
+The confusion matrix clearly shows that our model is doing good job on the class `happy` but it's performance is low on other two classes. One of the reason for this could be the fact that these two classes have less data. But when I looked at the images I found some images from these two classes are even hard for a human to tell whether the person is sad or neutral. Facial expression depends on individual as well. `Some person's neutral face looks like sad face.` We can see this from below samples.<br><br>
+
+![contradicting images](plots/contradicting_imgs.png)
+
+As we can see that first image is looking like `sad` and infact are model predicted it as `sad` but the true label is `neutral`. And the second image is more likely to be `neutral` and our model also predicted the same but the true label is `sad`.
+
 
 **Here is a sample gif showing the model performance.**
 
