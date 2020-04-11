@@ -19,6 +19,6 @@ The confusion matrix clearly shows that our model is doing good job on the class
 
 **Here is a sample gif showing the model performance.**
 
-![](out.gif)
+![](output/sample.gif)
 
-For better visuals you can download [this](https://github.com/greatsharma/Facial_Emotion_Recognition/blob/master/out.mov) and see locally.
+For better visuals you can download [this](https://github.com/greatsharma/Facial_Emotion_Recognition/blob/master/output/sample.mov) and see locally.
