@@ -20,7 +20,6 @@ from keras import preprocessing
 cascade_lassifiers = [
     "haarcascade_frontalface",
     "lbpcascade_frontalface",
-    "lbpcascade_profileface",
 ]
 
 haarcascade = cv2.CascadeClassifier(MODEL_PATH + f"{cascade_lassifiers[1]}.xml")
@@ -60,7 +59,6 @@ else:
     else:
         iswebcam = False
         vidcap=cv2.VideoCapture(TEST_SAMPLE_PATH + 'videos/video1.mp4')
-        # out = cv2.VideoWriter('output.mp4', -1, 20.0, (640,480))
 
     while True:
         status, frame = vidcap.read()
@@ -88,8 +86,6 @@ else:
 
         resized_img = cv2.resize(frame, (600, 500))
         cv2.imshow('Facial Emotion Recognition',resized_img)
-        # if not iswebcam:
-        #     out.write(resized_img)
 
         if cv2.waitKey(10) == ord('q'):
             break
