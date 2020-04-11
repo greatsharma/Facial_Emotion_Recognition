@@ -141,7 +141,7 @@ config:
       dtype: float32
       name: dropout_1
       noise_shape: null
-      rate: 0.25
+      rate: 0.4
       seed: null
       trainable: true
   - class_name: Conv2D
@@ -274,7 +274,7 @@ config:
       dtype: float32
       name: dropout_2
       noise_shape: null
-      rate: 0.25
+      rate: 0.4
       seed: null
       trainable: true
   - class_name: Conv2D
@@ -407,7 +407,7 @@ config:
       dtype: float32
       name: dropout_3
       noise_shape: null
-      rate: 0.4
+      rate: 0.5
       seed: null
       trainable: true
   - class_name: Flatten

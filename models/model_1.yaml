@@ -141,7 +141,7 @@ config:
       dtype: float32
       name: dropout_1
       noise_shape: null
-      rate: 0.3
+      rate: 0.25
       seed: null
       trainable: true
   - class_name: Conv2D
@@ -274,7 +274,7 @@ config:
       dtype: float32
       name: dropout_2
       noise_shape: null
-      rate: 0.3
+      rate: 0.25
       seed: null
       trainable: true
   - class_name: Conv2D
@@ -334,6 +334,63 @@ config:
       name: batchnorm_5
       scale: true
       trainable: true
+  - class_name: Conv2D
+    config:
+      activation: elu
+      activity_regularizer: null
+      bias_constraint: null
+      bias_initializer:
+        class_name: Zeros
+        config: {}
+      bias_regularizer: null
+      data_format: channels_last
+      dilation_rate: *id001
+      dtype: float32
+      filters: 256
+      kernel_constraint: null
+      kernel_initializer:
+        class_name: VarianceScaling
+        config:
+          distribution: truncated_normal
+          mode: fan_in
+          scale: 2.0
+          seed: null
+      kernel_regularizer: null
+      kernel_size: !!python/tuple
+      - 3
+      - 3
+      name: conv2d_6
+      padding: same
+      strides: *id002
+      trainable: true
+      use_bias: true
+  - class_name: BatchNormalization
+    config:
+      axis: !!python/object/apply:tensorflow.python.training.tracking.data_structures.ListWrapper
+      - - 3
+      beta_constraint: null
+      beta_initializer:
+        class_name: Zeros
+        config: {}
+      beta_regularizer: null
+      center: true
+      dtype: float32
+      epsilon: 0.001
+      gamma_constraint: null
+      gamma_initializer:
+        class_name: Ones
+        config: {}
+      gamma_regularizer: null
+      momentum: 0.99
+      moving_mean_initializer:
+        class_name: Zeros
+        config: {}
+      moving_variance_initializer:
+        class_name: Ones
+        config: {}
+      name: batchnorm_6
+      scale: true
+      trainable: true
   - class_name: MaxPooling2D
     config:
       data_format: channels_last
@@ -350,7 +407,7 @@ config:
       dtype: float32
       name: dropout_3
       noise_shape: null
-      rate: 0.5
+      rate: 0.4
       seed: null
       trainable: true
   - class_name: Flatten
@@ -414,7 +471,7 @@ config:
       dtype: float32
       name: dropout_4
       noise_shape: null
-      rate: 0.5
+      rate: 0.6
       seed: null
       trainable: true
   - class_name: Dense
