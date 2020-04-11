@@ -67,6 +67,8 @@ else:
 
         if iswebcam:
             frame=cv2.flip(frame,1,0)
+        else:
+            out = cv2.VideoWriter('out.avi',cv2.VideoWriter_fourcc('M','J','P','G'), 10, (600,500))
         
         gray_frame= cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
 
@@ -86,6 +88,8 @@ else:
 
         resized_img = cv2.resize(frame, (600, 500))
         cv2.imshow('Facial Emotion Recognition',resized_img)
+        if not iswebcam:
+            out.write(resized_img)
 
         if cv2.waitKey(10) == ord('q'):
             break
