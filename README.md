@@ -2,8 +2,7 @@
 
 ![](outputs/test.gif)
 
-For better visuals you can download [this](https://github.com/greatsharma/Facial_Emotion_Recognition/blob/master/outputs/test.mp4) and see locally.
-
+For better visuals you can watch [this](https://www.youtube.com/watch?v=DGjV34robv8) video or download [this](https://github.com/greatsharma/Facial_Emotion_Recognition/blob/master/outputs/test.mp4) and see locally.
 ### How to add a new model?
 For adding a new model to this repository all you have to do is create the new model, make your data compatible for new model(if required) and then mention the new model, that's it.
 
