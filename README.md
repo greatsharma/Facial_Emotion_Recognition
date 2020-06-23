@@ -81,4 +81,4 @@ For testing a model run following command
 **he** - 1 to apply `histogram equalization` otherwise 0, default is 0.<br>
 **ws** - Window size, `comma separated` values, default is None.<br>
 
-As each tensorflow model is more than around +50mbs, so adding all the models in this repository will increase it's size drastically hence I added few good performing models. So if you want to test a new model then simply go to [this]() repository, select any model of your choice from the `models` folder and then select label2text file corresponding to that model from the `label2text` folder. Then place these files to models and label2text folder of this repository to test that particular model.
+As each tensorflow model is more than around +50mbs, so adding all the models in this repository will increase it's size drastically hence I added few good performing models.
