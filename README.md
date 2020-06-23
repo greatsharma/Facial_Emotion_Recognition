@@ -18,7 +18,7 @@ for example you want to create a new model named `MyModel`, then you need to cha
         # train model here
 
  ```
- <sup>Refer to [model.py]() for seeing this process in action.</sup>
+ <sup>Refer to [models.py](https://github.com/greatsharma/Facial_Emotion_Recognition/blob/master/models.py) for seeing this process in action.</sup>
 
 2. **data_builder.py** - Within this file you will make data compatible for your model. For example in your `MyModel` you are not only feeding the raw face images but also feeding some ROI(region of interest) then you need to crop these ROI for all images and convert them to numpy arrays before feeding into the network.
 For this within data_builder.py you need to create a new class named `ImageToROI` extending `DataBuilder` class. `DataBuilder` is the class which needs to be extended and you should implement it's `build_from_directory` method, which returns the data in required format. You can also reuse already made classes if they support your model otherwise you need to create your own.
